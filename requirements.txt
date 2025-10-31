@@ -1,0 +1,7 @@
+pandas
+openpyxl
+seaborn
+scikit-learn
+Jinja2
+torch
+schedulefree
