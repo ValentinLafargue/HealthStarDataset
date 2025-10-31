@@ -66,7 +66,7 @@ Not yet published
 ```
 
 ## Contact
-For questions or feedback, please contact: [Valentin Lafargue/valentin.lafargue@math.univ-toulouse.fr]
+For questions or feedback, please contact: [Valentin Lafargue](valentin.lafargue@math.univ-toulouse.fr)
 
 
 
