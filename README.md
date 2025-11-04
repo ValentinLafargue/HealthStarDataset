@@ -12,6 +12,32 @@ The dataset includes 246 food products from Australian retailers in 2025. Each r
 
 The dataset is structured to support analysis of nutritional quality, HSR modeling, and food labeling research.
 
+#### Precise description
+The dataset consists of product-level information organized in a tabular format. Each row represents a single product, and each column corresponds to a distinct variable. The fields included in the dataset are summarized below:
+
+- product\_name: Name of the product.
+- Size\_g: Product size in grams.
+- Product\_type: Type or classification of the product.
+- category: Broader category of the product.
+- country: Country of origin or sale.
+- retailer: Retailer or brand associated with the product.
+- hsr: Health Star Rating displayed on the packaging.
+- nutrient\_energy\_kj: Energy content in kilojoules per 100g.
+- protein\_g\_per\_100g: Protein content per 100g.
+- fat\_g\_per\_100g: Total fat per 100g.
+- sat\_fat\_g\_per\_100g: Saturated fat per 100g.
+- carbohydrates: Total carbohydrates per 100g.
+- sugars\_g\_per\_100g: Sugar content per 100g.
+- sodium\_mg\_per\_100g: Sodium content per 100g in milligrams.
+- fiber\_g\_per\_100g: Dietary fiber per 100g.
+- ingredients\_text: Full ingredient list.
+- date\_collected: Date when the data was collected.
+- allergen: Presence of allergens, if any.
+- data\_source: Source from which the data was obtained.
+- kcal\_per\_100g: Energy content in kilocalories per 100g.
+
+All missing values have been explicitly removed to ensure data quality. Categorical variables have been harmonized to allow easy integration with other datasets and computational pipelines.
+
 ### Data Source
 All data were manually collected from Australian retail products in 2025. Efforts were made to ensure accuracy and consistency, including verification against product packaging and standardized variable naming.
 
@@ -52,6 +78,14 @@ The repository is organized this way:
 - HS_prediction.ipynb: Notebook used to produce the paper benchmark, it predicts the HSR using classical machine learning and neural networks.
 - requirements.txt: librairies needed in the project
 - utils.py: python fonctions used in the neural network 
+
+### Algorithm implementation and evaluation
+
+All algorithms employed in this study were implemented in Python using the scikit-learn library. For each algorithm, the implementation strategy depended on the availability and influence of hyperparameters. Algorithms with fixed or minimal hyperparameter configurations (e.g., Linear Regression) were applied using their default settings. In contrast, algorithms with tunable hyperparameters (e.g., Support Vector Machines) underwent a grid search with cross-validation to identify the optimal parameter values.
+
+It is also important to note that data standardization was applied, which was useful depending on the algorithm’s sensitivity to feature scaling. While standardization had negligible impact on scale-invariant models such as Linear Regression and Decision Tree Regression, it was essential for distance-based and margin-based methods, including K-Nearest Neighbors and Support Vector Machines.
+
+For the fine-tuning implementation, we used the OpenFoodFacts dataset to learn the Nutri-Scores. Our neural network results were obtained using Defazio et al. [Schedule-Free optimizer](https://github.com/facebookresearch/schedule_free).
 
 ## Citation
 If you use this dataset, please cite:
