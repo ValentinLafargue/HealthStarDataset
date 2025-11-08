@@ -50,7 +50,7 @@ The dataset can be used for:
 Please cite this dataset if used in your research (see **Citation** below).
 
 ### License
-This dataset is licensed under the [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/). Users are free to share and adapt the dataset, provided proper attribution is given.
+This dataset is licensed under the MIT License. Users are free to share and adapt the dataset, provided proper attribution is given.
 
 ### FAIR Principles
 The dataset follows the FAIR principles:  
