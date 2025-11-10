@@ -55,7 +55,7 @@ This dataset is licensed under the MIT License. Users are free to share and adap
 ### FAIR Principles
 The dataset follows the FAIR principles:  
 - **Findable:** Each product has a unique identifier; DOI assigned.  
-- **Accessible:** Open access via GitHub under CC BY 4.0.  
+- **Accessible:** Open access via GitHub under MIT License.  
 - **Interoperable:** Standardized units, consistent variable names, and harmonized categories.  
 - **Reusable:** Complete metadata, data dictionaries, and documentation support reproducibility and further research.
 
